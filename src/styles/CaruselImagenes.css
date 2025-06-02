@@ -3,6 +3,29 @@
   overflow: hidden;
   padding: 20px;
   box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.carousel-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.carousel-controls button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 18px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-controls button:hover {
+  background-color: #1b5e20;
 }
 
 .carousel-container {
@@ -10,49 +33,61 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+  gap: 16px;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .carousel-item {
   flex: 0 0 auto;
   width: 300px;
-  margin-right: 20px;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: scale(1.03);
 }
 
 .carousel-item img {
   width: 100%;
-  height: auto;
-  border-radius: 8px 8px 0 0;
+  height: 70%; /* Altura fija uniforme */
+  border-radius: 12px 12px 0 0;
+  object-fit: cover; /* Recorta manteniendo proporciones */
 }
 
+
 .image-info {
-  padding: 10px;
+  padding: 12px;
 }
 
 .image-info h3 {
-  font-size: 1em;
-  margin: 5px 0;
+  font-size: 1.1em;
+  margin: 8px 0 4px;
+  color: #333;
 }
 
 .image-info p {
   font-size: 0.9em;
   color: #666;
-  margin: 5px 0;
+  margin: 4px 0;
 }
 
 .precio {
+  display: block;
+  margin-top: 8px;
   font-weight: bold;
   color: #2e7d32;
-}
-
-/* Opcional: ocultar scrollbar en navegadores modernos */
-.carousel-container::-webkit-scrollbar {
-  display: none;
-}
-.carousel-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  font-size: 1em;
 }
