@@ -41,6 +41,7 @@ const CaruselImagenes = () => {
       scrollRight();
     }, 3000);
     return () => clearInterval(interval);
+
   }, []);
 
   return (
