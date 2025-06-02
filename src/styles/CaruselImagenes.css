@@ -91,3 +91,47 @@
   color: #2e7d32;
   font-size: 1em;
 }
+/* --- RESPONSIVE CAROUSEL --- */
+@media (max-width: 1024px) {
+  .carousel-item {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 200px;
+  }
+
+  .carousel-controls button {
+    font-size: 16px;
+    padding: 4px 10px;
+  }
+
+  .image-info h3 {
+    font-size: 1em;
+  }
+
+  .image-info p, .precio {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-section {
+    padding: 12px;
+  }
+
+  .carousel-item {
+    width: 160px;
+  }
+
+  .carousel-controls {
+    justify-content: center;
+  }
+
+  .carousel-controls button {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+}
