@@ -1,0 +1,58 @@
+.carousel-section {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 300px;
+  margin-right: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.image-info {
+  padding: 10px;
+}
+
+.image-info h3 {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+.image-info p {
+  font-size: 0.9em;
+  color: #666;
+  margin: 5px 0;
+}
+
+.precio {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* Opcional: ocultar scrollbar en navegadores modernos */
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+.carousel-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
